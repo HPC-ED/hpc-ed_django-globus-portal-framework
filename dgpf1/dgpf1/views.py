@@ -9,7 +9,7 @@ import sys
 import globus_sdk
 from globus_portal_framework.gsearch import get_index
 
-from dgpf1.hpced.download import download
+from dgpf1.download import download
 
 @require_GET
 @cache_control(max_age=60 * 60 * 24, immutable=True, public=True)  # one day
