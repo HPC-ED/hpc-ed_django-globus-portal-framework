@@ -23,6 +23,7 @@ import globus_portal_framework.urls
 
 urlpatterns = [
     path('<index:index>/about/', views.search_about, name='search-about'),
+    path('<index:index>/download/', views.download_as_html, name='download-as-html'),
     path('api/provider/', include('provider.urls')),
     path('admin/', admin.site.urls),
     # Provides the basic search portal

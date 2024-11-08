@@ -99,15 +99,15 @@ WSGI_APPLICATION = 'dgpf1.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'USER': CONF['DJANGO_USER'],
-        'PASSWORD': CONF['DJANGO_PASS'],
-        'HOST': os.environ.get('PGHOST', CONF.get('DB_HOSTNAME_WRITE', 'localhost')),
-    }
-#   'sqlite3': {
-#       'ENGINE': 'django.db.backends.sqlite3',
-#       'NAME': BASE_DIR / 'db.sqlite3',
-#   }
+    # 'default': {
+    #     'USER': CONF['DJANGO_USER'],
+    #     'PASSWORD': CONF['DJANGO_PASS'],
+    #     'HOST': os.environ.get('PGHOST', CONF.get('DB_HOSTNAME_WRITE', 'localhost')),
+    # }
+  'default': {
+      'ENGINE': 'django.db.backends.sqlite3',
+      'NAME': BASE_DIR / 'db.sqlite3',
+  }
 }
 
 for db in DATABASES:
