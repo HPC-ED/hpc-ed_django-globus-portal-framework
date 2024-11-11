@@ -1,3 +1,6 @@
+v0.11.0 2024-11-11 Zilu
+  - Move download button next to Results label, number html rows from 1, give download files meaningfull names
+
 v0.10.0 2024-11-07 Zilu, JP
   - Implement new html download feature
 
