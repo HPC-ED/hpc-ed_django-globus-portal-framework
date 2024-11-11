@@ -213,6 +213,7 @@ def download(search, user):
 
         # convert to dataframe
         df = pd.DataFrame(metadata, columns=columns)
+        df.index += 1
 
         # convert to html for a simple table with formatters
         content = df.to_html(escape=False, formatters=[

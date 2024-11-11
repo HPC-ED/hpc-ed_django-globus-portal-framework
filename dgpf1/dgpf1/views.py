@@ -54,12 +54,13 @@ def download_as_html(request: HttpRequest, index: str) -> HttpResponse:
     # download the requested metadata into html and assign a filename
     status, content = download(request.session['search'], request.user)
     filename = request.session['search']['query'] if status else "Error"
+    filename = "_all" if filename == '*' else "_" + filename
 
     # HttpResponse to render
     response = HttpResponse(content,
         headers={
             "Content-Type": "html",
-            "Content-Disposition": 'attachment; filename="' + filename +'.html"'
+            "Content-Disposition": 'attachment; filename="hpc-ed' + filename +'.html"'
         }
     )
     return response
